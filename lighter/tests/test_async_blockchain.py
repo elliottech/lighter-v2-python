@@ -22,7 +22,6 @@ fake_orderbook_data = {
 
 @pytest.fixture
 def mocked_client(mocker) -> Client:
-    mocker.patch("web3.main.Web3.HTTPProvider")
     mocker.patch("web3.main.Web3")
     mocker.patch(
         "lighter.modules.api.Api.get_orderbook_meta",
@@ -50,7 +49,7 @@ def mocked_client(mocker) -> Client:
         side_effect=lambda x: {"WETH": 10**18, "USDC": 10**6}[x],
     )
 
-    client = Client(private_key="xxx", api_auth="xxx", web3_provider_url="xxx")
+    client = Client(private_key="xxx", api_auth="xxx", web3_provider_url="https://arbitrum-one.publicnode.com")
     client.blockchain_id = 420
     return client
 

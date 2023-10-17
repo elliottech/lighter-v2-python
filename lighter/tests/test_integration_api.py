@@ -4,7 +4,7 @@ import os
 from lighter.lighter_client import Client
 from lighter.constants import ORDERBOOK_WETH_USDC, ORDER_STATUS_OPEN, ORDER_TYPE_LIMIT
 
-TEST_OWNER_ADDRESS = "0x127ee003ABe70AD4eBeEA7750D784A84463Fa28d"
+TEST_OWNER_ADDRESS = "0xd057E08695d1843FC21F27bBd0Af5D4B06203F48"
 
 
 @pytest.fixture
