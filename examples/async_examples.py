@@ -26,7 +26,7 @@ async def main():
     print(
         client.api.get_candles(
             orderbook_symbol="WETH_USDC",
-            resolution=60,
+            resolution="1m",  # 1m, 5m, 15m, 1h, 4h, 1d
             timestamp_start=int(time.time()) - 60 * 60 * 60 * 24,
             timestamp_end=int(time.time()),
         )

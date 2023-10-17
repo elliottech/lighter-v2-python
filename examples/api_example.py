@@ -164,9 +164,9 @@ my_trades = client.api.get_trades(
 # Let's get candle stick data from the WETH_USDC order book.
 candles = client.api.get_candles(
     orderbook_symbol=ORDERBOOK_WETH_USDC,
-    resolution=5,
+    resolution="1m",  # 1m, 5m, 15m, 1h, 4h, 1d
     timestamp_start=1609276939,
-    timestamp_end=1609276940,
+    timestamp_end=1709276940,
 )
 
 # example output:
